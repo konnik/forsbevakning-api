@@ -2,6 +2,7 @@
 import requests
 import time
 from cachetools import cached, TTLCache
+from threading import RLock
 import logging
 
 log = logging.getLogger(__name__)
@@ -10,7 +11,9 @@ log.setLevel(logging.INFO)
 CACHE_MAX_ITEMS = 100
 CACHE_TTL = 60*60 # enhet i sekunder
 
-@cached(cache = TTLCache(CACHE_MAX_ITEMS,CACHE_TTL))
+lock = RLock()
+
+@cached(cache = TTLCache(CACHE_MAX_ITEMS,CACHE_TTL),lock = lock)
 def fetch_data(subid):
     log.info("Laddar data för subid %s", subid)
 
