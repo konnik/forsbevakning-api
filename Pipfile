@@ -9,6 +9,7 @@ verify_ssl = true
 requests = "*"
 fastapi = {extras = ["all"],version = "*"}
 gunicorn = "*"
+cachetools = "*"
 
 [requires]
 python_version = "3.7"
