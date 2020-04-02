@@ -10,6 +10,12 @@ requests = "*"
 fastapi = {extras = ["all"],version = "*"}
 gunicorn = "*"
 cachetools = "*"
+pyjwt = "*"
+six = "*"
+python-jose = "*"
+python-jose-cryptodome = "*"
+cryptography = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"
