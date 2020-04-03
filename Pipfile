@@ -17,6 +17,7 @@ python-jose-cryptodome = "*"
 cryptography = "*"
 python-dotenv = "*"
 pycryptodome = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
