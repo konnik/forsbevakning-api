@@ -27,7 +27,7 @@ async def secure( authorization: str = Header(None)):
     return a
 
 
-@app.get("/apa"):
+@app.get("/apa")
 async def apa():
 
     with conn = psycopg2.connect(DATABASE_URL, sslmode='require'):
