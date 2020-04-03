@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Header
+from fastapi import FastAPI, Header, Response
 import smhi
 import auth
 import os
@@ -14,8 +14,14 @@ async def root():
 
 
 @app.get("/prognos/{subid}")
-async def prognos(subid):
-    return smhi.fetch_data(subid)
+async def prognos(subid, response: Response):
+    prognos = smhi.fetch_data(subid)
+
+    if prognos is None:
+        response.status_code = 404
+        return "Id finns inte."
+    
+    return prognos 
 
 
 
@@ -30,7 +36,7 @@ async def secure( authorization: str = Header(None)):
 @app.get("/apa")
 async def apa():
 
-    with conn = psycopg2.connect(DATABASE_URL, sslmode='require'):
+    with psycopg2.connect(DATABASE_URL, sslmode='require') as conn:
         cur = conn.cursor()
         cur.execute("select * from apa")
         rows = cur.fetchall()

@@ -20,8 +20,10 @@ def fetch_data(subid):
     url = "http://vattenwebb.smhi.se/hydronu/data/point?subid={}".format(subid)
 
     res = requests.get(url)
-    chartData = res.json()["chartData"]
+    if res.status_code != 200:
+        return None
 
+    chartData = res.json()["chartData"]
     data = {
         "subid": chartData["subid"],
         "mq": chartData["mq"],
