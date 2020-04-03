@@ -16,6 +16,7 @@ python-jose = "*"
 python-jose-cryptodome = "*"
 cryptography = "*"
 python-dotenv = "*"
+heroku = "*"
 
 [requires]
 python_version = "3.7"

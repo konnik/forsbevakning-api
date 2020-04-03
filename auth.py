@@ -56,7 +56,3 @@ def authenticate(token):
                 )
     return payload
 
-t = login()
-print("TOKEN: ", t)
-u = authenticate(t)
-print(u)

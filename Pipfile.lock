@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a7ea0e8eaab67270696d02b4b832dec1e64e8d7f1348ce69d3575b8b5b76118a"
+            "sha256": "c5c3d8b553b17532dedb16993914f963f7c4fd35f09c42ca2b7ac8561d056970"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -204,6 +204,13 @@
             ],
             "version": "==0.9.0"
         },
+        "heroku": {
+            "hashes": [
+                "sha256:cbeba42b628bc38504d49ace86b8c1729ab2156e530fb1823954988932c8f7fb"
+            ],
+            "index": "pypi",
+            "version": "==0.1.4"
+        },
         "httptools": {
             "hashes": [
                 "sha256:0a4b1b2012b28e68306575ad14ad5e9120b34fccd02a81eb08838d7e3bbb48be",
@@ -361,6 +368,12 @@
             ],
             "index": "pypi",
             "version": "==1.7.1"
+        },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:6f197348b46fb8cdf9f3fcfc2a7d5a97da95db3e2e8667cf657216274fe1b009"
+            ],
+            "version": "==1.5"
         },
         "python-dotenv": {
             "hashes": [

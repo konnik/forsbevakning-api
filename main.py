@@ -20,5 +20,5 @@ async def secure( authorization: str = Header(None)):
     token = authorization.split()[1]
     a = auth.authenticate(token)
 
-    return "Säkert API! Ditt id: " + a["sub"]
+    return a
 
