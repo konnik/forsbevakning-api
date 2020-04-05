@@ -23,8 +23,10 @@ def fetch_data(subid):
     if res.status_code != 200:
         return None
 
-    chartData = res.json()["chartData"]
+    data = res.json()
+    chartData = data["chartData"]
     data = {
+        "poiCenter" : data["poiCenter"],
         "subid": chartData["subid"],
         "mq": chartData["mq"],
         "mlq": chartData["mlq"],
