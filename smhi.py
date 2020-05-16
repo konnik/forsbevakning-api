@@ -31,8 +31,8 @@ def fetch_data(subid):
         "mq": chartData["mq"],
         "mlq": chartData["mlq"],
         "mhq": chartData["mhq"],
-        "hindcast": chartData["hindcast"]["data"],
-        "forecast": chartData["forecast"]["data"]
+        "hindcast": chartData["coutHindcast"]["data"],
+        "forecast": chartData["coutForecast"]["data"]
     }
 
     return data
